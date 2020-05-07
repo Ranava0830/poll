@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href='/poll/'>返回投票主題列表</a>
+    <h1>{{ poll.subject }}</h1>
+    <p>{{ poll.desc linebreaks}}</p>
+    
+     <ul>
+         {% for option in option_list %}
+         <li>
+             {{option.tittle }} : {{option.count }} 票
+         </li>
+     </ul>
+
+</body>
+</html>
