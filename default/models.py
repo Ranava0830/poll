@@ -6,14 +6,14 @@ class Poll(models.Model):
     desc = models.TextField('說明',max_length=512)
     created = models.DateField('建立時間',auto_now_add=True)
 
-    def _str_(self):
-        return '{}:{}'.format(self.id, self.subject)
+    def __str__(self):
+        return '投票主題 {}'.format( self.subject)
 
 class Option(models.Model):
     poll_id = models.IntegerField('所屬投票主題')
     title = models.CharField('選填文字',max_length=100)
     count = models.IntegerField('票數',default=0)
     
-    def_str_(self):
+    def __str__(self):
 
        return '():({}) {}'.format(self.id, self.poll_id, self.tittle)

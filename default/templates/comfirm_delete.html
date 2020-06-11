@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<p>確定要刪除{{ object }}嗎?</p>
+<form action=''method='post'>
+    {% csrf_token %}
+    <input type='submit' value='確認刪除'
+</form>
+{% endblock %}
